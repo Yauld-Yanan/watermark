@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>图片水印工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>图片水印工具</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            <button id="selectButton">选择图片</button>
+            <span id="fileName">未选择文件</span>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label>时间：</label>
+                <input type="time" id="timeInput" value="14:30">
+            </div>
+            
+            <div class="input-group">
+                <label>日期：</label>
+                <input type="date" id="dateInput">
+            </div>
+            
+            <div class="input-group">
+                <label>水印文字：</label>
+                <input type="text" id="textInput" value="微信小程序-小小签到">
+            </div>
+        </div>
+
+        <button id="addWatermark" class="primary-button">添加水印</button>
+
+        <a id="downloadLink" style="display: none;" download="watermarked.png">
+            <button class="download-button">下载图片</button>
+        </a>
+
+        <div class="preview-section">
+            <canvas id="previewCanvas"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
